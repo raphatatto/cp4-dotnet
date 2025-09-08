@@ -45,3 +45,4 @@ C:\Users\rapha\source\repos\cp\cp\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagge
 C:\Users\rapha\source\repos\cp\cp\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\rapha\source\repos\cp\cp\bin\Debug\net8.0\ZstdSharp.dll
 C:\Users\rapha\source\repos\cp\cp\obj\Debug\net8.0\cp.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\rapha\source\repos\cp\cp\obj\Debug\net8.0\cp.sourcelink.json

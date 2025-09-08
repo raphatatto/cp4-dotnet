@@ -1,11 +1,11 @@
-using cp.Models;
-using cp.Service;
 using cp.Data;
-using Microsoft.Extensions.Options;
+using cp.Service;
+using Microsoft.OpenApi.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.Configure<MongoDbSettings>(
-    builder.Configuration.GetSection("MongoDB"));
+    builder.Configuration.GetSection("MongoDb"));
 
 builder.Services.AddSingleton<LivroService>();
 builder.Services.AddControllersWithViews();
@@ -14,7 +14,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
-
+var cs = builder.Configuration["MongoDb:ConnectionString"];
+Console.WriteLine($"[DEBUG] CS = '{cs}'");
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
