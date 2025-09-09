@@ -5,17 +5,17 @@ namespace cp.Models
 {
     public class Livro
     {
-        [BsonId]
-        [BsonRepresentation(BsonType.ObjectId)]
-        public string Id { get; set; }
+         [BsonId]
+    [BsonRepresentation(BsonType.ObjectId)]
+    public string? Id { get; set; }   
 
-        [BsonElement("Titulo")]
-        public string Titulo { get; set; }
+    [BsonElement("Titulo")]
+    public string Titulo { get; set; } = null!;
 
-        [BsonElement("AnoPublicacao")]
-        public int AnoPublicacao { get; set; }
+    [BsonElement("AnoPublicacao")]
+    public int AnoPublicacao { get; set; }
 
-        [BsonElement("Autor")]
-        public Autor Autor { get; set; }
+    [BsonElement("Autor")]
+    public Autor Autor { get; set; } = null!;
     }
 }

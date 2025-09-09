@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rapha\\source\\repos\\cp\\cp\\cp.csproj": {}
+    "C:\\Users\\RaphaelaOliveiraTatt\\Downloads\\cp4-dotnet\\cp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rapha\\source\\repos\\cp\\cp\\cp.csproj": {
+    "C:\\Users\\RaphaelaOliveiraTatt\\Downloads\\cp4-dotnet\\cp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rapha\\source\\repos\\cp\\cp\\cp.csproj",
+        "projectUniqueName": "C:\\Users\\RaphaelaOliveiraTatt\\Downloads\\cp4-dotnet\\cp.csproj",
         "projectName": "cp",
-        "projectPath": "C:\\Users\\rapha\\source\\repos\\cp\\cp\\cp.csproj",
-        "packagesPath": "C:\\Users\\rapha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rapha\\source\\repos\\cp\\cp\\obj\\",
+        "projectPath": "C:\\Users\\RaphaelaOliveiraTatt\\Downloads\\cp4-dotnet\\cp.csproj",
+        "packagesPath": "C:\\Users\\RaphaelaOliveiraTatt\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\RaphaelaOliveiraTatt\\Downloads\\cp4-dotnet\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\rapha\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\RaphaelaOliveiraTatt\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -43,20 +37,15 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.200"
+        }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "MongoDB.Bson": {
-              "target": "Package",
-              "version": "[3.4.3, )"
-            },
             "MongoDB.Driver": {
               "target": "Package",
-              "version": "[3.4.3, )"
+              "version": "[2.25.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -82,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.414/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

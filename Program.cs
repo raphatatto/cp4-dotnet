@@ -16,8 +16,7 @@ builder.Services.AddSwaggerGen();
 var app = builder.Build();
 var cs = builder.Configuration["MongoDb:ConnectionString"];
 Console.WriteLine($"[DEBUG] CS = '{cs}'");
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
@@ -27,8 +26,9 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
 app.UseAuthorization();
+
+app.MapControllers();
 
 app.MapControllerRoute(
     name: "default",

@@ -1,25 +1,33 @@
 @model cp.Models.Livro
+@{
+    ViewData["Title"] = "Novo Livro";
+}
+
 <h2>Novo Livro</h2>
+
 <form asp-action="Create" method="post">
-    <div class="mb-3">
+    <div class="form-group">
         <label asp-for="Titulo"></label>
         <input asp-for="Titulo" class="form-control" />
+        <span asp-validation-for="Titulo" class="text-danger"></span>
     </div>
-    <div class="mb-3">
+
+    <div class="form-group">
         <label asp-for="AnoPublicacao"></label>
-        <input asp-for="AnoPublicacao" class="form-control" />
+        <input asp-for="AnoPublicacao" class="form-control" type="number" />
+        <span asp-validation-for="AnoPublicacao" class="text-danger"></span>
     </div>
-    <fieldset>
-        <legend>Autor</legend>
-        <div class="mb-3">
-            <label asp-for="Autor.Nome"></label>
-            <input asp-for="Autor.Nome" class="form-control" />
-        </div>
-        <div class="mb-3">
-            <label asp-for="Autor.Nacionalidade"></label>
-            <input asp-for="Autor.Nacionalidade" class="form-control" />
-        </div>
-    </fieldset>
-    <button class="btn btn-success" type="submit">Salvar</button>
-    <a asp-action="Index" class="btn btn-secondary">Voltar</a>
+
+    <h4>Autor</h4>
+    <div class="form-group">
+        <label>Nome</label>
+        <input name="Autor.Nome" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Nacionalidade</label>
+        <input name="Autor.Nacionalidade" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-2">Salvar</button>
+    <a asp-action="Index" class="btn btn-secondary mt-2">Voltar</a>
 </form>

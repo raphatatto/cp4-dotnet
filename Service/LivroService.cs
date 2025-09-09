@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 using cp.Data;
-
+using MongoDB.Bson;
 namespace cp.Service
 {
     public class LivroService
@@ -25,8 +25,13 @@ namespace cp.Service
             await _livros.Find(l => l.Id == id).FirstOrDefaultAsync();
 
         // CRIAR
-        public async Task CreateAsync(Livro livro) =>
-            await _livros.InsertOneAsync(livro);
+        public async Task CreateAsync(Livro livro)
+        {
+        if (string.IsNullOrWhiteSpace(livro.Id))
+            livro.Id = ObjectId.GenerateNewId().ToString();
+
+        await _livros.InsertOneAsync(livro);
+        }
 
         // ATUALIZAR (substitui documento inteiro)
         public async Task UpdateAsync(string id, Livro livroAtualizado)

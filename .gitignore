@@ -1,0 +1,42 @@
+# .NET / Visual Studio / Rider
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.vs/
+
+# Build results
+[Bb]uild/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+*.exe
+*.dll
+*.pdb
+*.cache
+*.log
+*.diff
+*.patch
+*.tmp
+
+# Rider
+.idea/
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# MongoDB User Secrets (não versionar credenciais locais)
+secrets.json
+
+# Configurações sensíveis
+appsettings.Development.json
+appsettings.Local.json

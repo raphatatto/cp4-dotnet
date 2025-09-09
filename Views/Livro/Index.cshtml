@@ -1,21 +1,33 @@
 @model IEnumerable<cp.Models.Livro>
-    <h2>Livros</h2>
-    <p><a asp-action="Create" class="btn btn-primary">Novo</a></p>
-    <table class="table">
-        <thead><tr><th>Título</th><th>Ano</th><th>Autor</th><th></th></tr></thead>
-        <tbody>
-            @foreach (var l in Model)
-  {
-            <tr>
-                <td>@l.Titulo</td>
-                <td>@l.AnoPublicacao</td>
-                <td>@l.Autor?.Nome</td>
-                <td>
-                    <a asp-action="Details" asp-route-id="@l.Id">Detalhes</a> |
-                    <a asp-action="Edit" asp-route-id="@l.Id">Editar</a> |
-                    <a asp-action="Delete" asp-route-id="@l.Id">Excluir</a>
-                </td>
-            </tr>
-  }
-        </tbody>
-    </table>
+@{
+    ViewData["Title"] = "Livros";
+}
+
+<h2>Livros</h2>
+<p><a class="btn btn-primary" asp-action="Create">Novo</a></p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>TÃ­tulo</th>
+            <th>Ano</th>
+            <th>Autor</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var l in Model)
+{
+    <tr>
+        <td>@l.Titulo</td>
+        <td>@l.AnoPublicacao</td>
+        <td>@(l.Autor != null ? $"{l.Autor.Nome} ({l.Autor.Nacionalidade})" : "-")</td>
+        <td>
+            <a asp-action="Details" asp-route-id="@l.Id">Detalhes</a> |
+            <a asp-action="Edit" asp-route-id="@l.Id">Editar</a> |
+            <a asp-action="Delete" asp-route-id="@l.Id">Excluir</a>
+        </td>
+    </tr>
+}
+    </tbody>
+</table>

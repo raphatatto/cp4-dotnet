@@ -7,9 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MongoDB.Bson" Version="3.4.3" />
-    <PackageReference Include="MongoDB.Driver" Version="3.4.3" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="9.0.4" />
-  </ItemGroup>
+  <PackageReference Include="MongoDB.Driver" Version="2.25.0" />
+  <PackageReference Include="Swashbuckle.AspNetCore" Version="9.0.4" />
+</ItemGroup>
 
 </Project>
